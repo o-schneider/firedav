@@ -1,0 +1,70 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <meta charset="utf-8">
+
+    <title>FireDAV</title>
+
+    <script data-main="js/app" src="js/lib/require.js"></script>
+
+    <link href="css/gaia/shared/style/keyboard_symbols" rel="stylesheet" type="text/css">
+    <link href="css/gaia/shared/style/buttons.css" rel="stylesheet" type="text/css">
+    <link href="css/gaia/shared/style/headers.css" rel="stylesheet" type="text/css">
+    <link href="css/gaia/shared/style/input_areas.css" rel="stylesheet" type="text/css">
+    <link href="css/gaia/shared/style/layout.css" rel="stylesheet" type="text/css">
+    <link href="css/gaia/shared/style/progress_activity.css" rel="stylesheet" type="text/css">
+    <link href="css/gaia/shared/style/confirm.css" rel="stylesheet" type="text/css">
+    <link href="css/gaia/shared/style/status.css" rel="stylesheet" type="text/css">
+
+    <link href="css/app/style.css" rel="stylesheet" type="text/css">
+</head>
+<body role="application">
+<section role="region">
+    <header>
+        <h1>FireDAV</h1>
+    </header>
+    <header>
+        <h2>Frontend for DAV synchronization in Firefox OS using jsDAVlib</h2>
+    </header>
+</section>
+<section id="info"></section>
+
+<section id="config" class="vbox fit scroll">
+    <form>
+        <h1>Contacts</h1>
+        <p>
+            <input type="text" name="url" id="url" placeholder="CardDAV URL" >
+        </p>
+
+        <p>
+            <input type="text" name="user" id="user" placeholder="username" >
+        </p>
+
+        <p>
+            <input type="password" name="passwd" id="passwd" placeholder="password" >
+        </p>
+    </form>
+</section>
+<footer class="gaia-footer">
+    <button id="import">Import</button>
+</footer>
+
+<form role="dialog" data-type="confirm" id="importing-screen">
+    <section>
+        <h1>Importing contacts</h1>
+        <p role="status">
+            <span id="progress-status">?/?</span>
+            <progress id="progress" value="0" max="100"></progress>
+        </p>
+    </section>
+    <menu>
+        <button class="full">Cancel</button>
+    </menu>
+</form>
+
+<section role="status" id="import-done" class="ease">
+    <p>Contacts imported</p>
+</section>
+
+</body>
+</html>

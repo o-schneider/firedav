@@ -1,0 +1,10 @@
+{
+  "amd": {},
+  "volo": {
+    "baseUrl": "www/js/lib",
+    "dependencies": {
+      "require": "github:jrburke/requirejs/2.1.15",
+      "vcardjs": "github:nilclass/vcardjs/v0.1"
+    }
+  }
+}
